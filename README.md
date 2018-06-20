@@ -1,21 +1,24 @@
 # ExpressService
 快递100查询（PHP版本），yii2快递查询扩展
 
-环境要求：yii2
+## 环境要求：yii2
 
-使用
+## 使用
+
 基本使用:
 
+```php
 <?php
 
 use dzer\express\Express;
 
 //Express::search('快递单号','快递公司代码（可空）','返回格式（可空）');
 $rs = Express::search('807209844896');
+```
 不传递快递公司代码时，会自动判断快递单号所属快递公司，默认返回json.
 
 返回结果:
-
+```
 {
   "nu": "807209844896",
   "message": "ok",
@@ -78,8 +81,9 @@ $rs = Express::search('807209844896');
   ],
   "state": "5"
 }
+```
 返回结果说明：
-
+```
 com	物流公司编号
 nu	物流单号
 time	每条跟踪信息的时间
@@ -96,8 +100,10 @@ status	查询结果状态：
 	0：物流单暂无结果，
 	1：查询成功，
 	2：接口出现异常，
-快递公司代码：
+```
 
+快递公司代码：
+```
 $data = array(
         'shunfeng' => '顺丰',
         'yuantong' => '圆通速递',
@@ -190,3 +196,7 @@ $data = array(
         'zhongxinda' => '忠信达',
         'zhimakaimen' => '芝麻开门'
     );
+```
+## License
+
+MIT
