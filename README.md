@@ -10,7 +10,7 @@
 ```php
 <?php
 
-use dzer\express\Express;
+use app\common\services\express\ExpressService;
 
 //Express::search('快递单号','快递公司代码（可空）','返回格式（可空）');
 $rs = Express::search('807209844896');
